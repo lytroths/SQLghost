@@ -1,0 +1,48 @@
+import sys
+import requests
+from googlesearch import search
+import time
+import os
+
+os.system("clear")
+
+
+print(" ____   ___  _          _               _   ")
+print("/ ___| / _ \| |    __ _| |__   ___  ___| |_ ")
+print("\___ \| | | | |   / _` | '_ \ / _ \/ __| __|")
+print(" ___) | |_| | |__| (_| | | | | (_) \__ \ |_ ")
+print("|____/ \__\_\_____\__, |_| |_|\___/|___/\__|")
+print("                  |___/                     ")
+
+print("""
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ #				Use It Responsibly				    #
+ #				Made By Armitage or CK      				    #
+ #                              Github: lytroths				    #
+ #    		I Hold No Responsibility For Any Server Comprimization Done	    #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+""")
+
+
+
+dork = raw_input("Enter Dork To Search: ")
+amount = raw_input("Enter Maximum Amount To Query: ")
+
+try:
+	for url in search(dork, stop=int(amount)):
+		u = url.split()
+		for i in u:
+			print("="*40)
+			print("[*] Possible Vulnerable Url")
+			time.sleep(1)
+			print(i)
+			print("="*40)
+			print("[*] Checking Url For Sqli Vulnerability")
+			time.sleep(1)
+			error_Based = bane.sqlieb(i)
+			time_Based = bane.sqlitb(i)
+			print("+-"*40)
+except Exception as e:
+	print("The Script has encountered an error")
+	print(e)
+	sys.exit()

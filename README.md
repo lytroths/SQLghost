@@ -1,2 +1,2 @@
 # SQLghost
-Another SQL dork script (early access)
+Another python SQL dork script (early access)
